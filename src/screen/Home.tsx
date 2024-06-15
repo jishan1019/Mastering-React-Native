@@ -22,6 +22,10 @@ const Home = () => {
         onPress={() => navigate('Stopwatch')}
       />
       <Button title="Go to Note App" onPress={() => navigate('Note')} />
+      <Button
+        title="Go to Random Color Generate"
+        onPress={() => navigate('RandomColor')}
+      />
     </View>
   );
 };

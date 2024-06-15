@@ -8,6 +8,7 @@ import Home from './screen/Home';
 import Calculator from './screen/Calculator';
 import Stopwatch from './screen/Stopwatch';
 import Note from './screen/Note';
+import RandomColorGenerate from './screen/RandomColorGenerate';
 
 const AppContent: React.FC = () => {
   const {currentScreen} = useNavigation();
@@ -21,6 +22,8 @@ const AppContent: React.FC = () => {
       return <Calculator />;
     case 'Note':
       return <Note />;
+    case 'RandomColor':
+      return <RandomColorGenerate />;
     default:
       return <Home />;
   }
