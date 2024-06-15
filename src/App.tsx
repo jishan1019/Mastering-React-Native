@@ -6,6 +6,7 @@ import {
 } from './components/NavigationProvider';
 import Home from './screen/Home';
 import Details from './screen/Details';
+import Calculator from './screen/Calculator';
 
 const AppContent: React.FC = () => {
   const {currentScreen} = useNavigation();
@@ -15,6 +16,8 @@ const AppContent: React.FC = () => {
       return <Home />;
     case 'Details':
       return <Details />;
+    case 'Calculator':
+      return <Calculator />;
     default:
       return <Home />;
   }

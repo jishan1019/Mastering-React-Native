@@ -9,10 +9,15 @@ const Home = () => {
 
   return (
     <View>
-      <Toolbar title="Home" backgroundColor="#6200EE" />
+      <Toolbar
+        title="Home"
+        backgroundColor="#6200EE"
+        statusbarColor="#5a00db"
+      />
       <Text>Home</Text>
 
       <Button title="Go to Details" onPress={() => navigate('Details')} />
+      <Button title="Go to Calculator" onPress={() => navigate('Calculator')} />
     </View>
   );
 };

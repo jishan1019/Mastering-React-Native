@@ -1,12 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  StatusBar,
+} from 'react-native';
 
 interface ToolbarProps {
   title: string;
   backgroundColor?: string;
   showBackButton?: boolean;
   onBackPress?: () => void;
+  statusbarColor?: string;
 }
 
 const Toolbar: React.FC<ToolbarProps> = ({
@@ -14,9 +21,11 @@ const Toolbar: React.FC<ToolbarProps> = ({
   backgroundColor = '#6200EE',
   showBackButton = false,
   onBackPress,
+  statusbarColor,
 }) => {
   return (
     <View style={[styles.toolbar, {backgroundColor}]}>
+      <StatusBar backgroundColor={statusbarColor ? statusbarColor : '#000'} />
       {showBackButton && (
         <TouchableOpacity style={styles.backButton} onPress={onBackPress}>
           <Text style={styles.backText}>{'<'}</Text>
@@ -33,9 +42,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    elevation: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: 'black',
+    elevation: 6, // Elevation for Android shadow
+    shadowColor: '#000', // Shadow for iOS
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
   },
   title: {
     color: 'white',
@@ -49,7 +60,8 @@ const styles = StyleSheet.create({
   },
   backText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 24,
+    marginRight: 20,
   },
 });
 
