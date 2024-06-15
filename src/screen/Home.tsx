@@ -26,6 +26,10 @@ const Home = () => {
         title="Go to Random Color Generate"
         onPress={() => navigate('RandomColor')}
       />
+      <Button
+        title="Go to Pass Generate"
+        onPress={() => navigate('PassGenerate')}
+      />
     </View>
   );
 };
