@@ -21,6 +21,7 @@ const Home = () => {
         title="Go to Stopwatch App"
         onPress={() => navigate('Stopwatch')}
       />
+      <Button title="Go to Note App" onPress={() => navigate('Note')} />
     </View>
   );
 };
