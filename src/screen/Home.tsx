@@ -16,8 +16,11 @@ const Home = () => {
       />
       <Text>Home</Text>
 
-      <Button title="Go to Details" onPress={() => navigate('Details')} />
       <Button title="Go to Calculator" onPress={() => navigate('Calculator')} />
+      <Button
+        title="Go to Stopwatch App"
+        onPress={() => navigate('Stopwatch')}
+      />
     </View>
   );
 };

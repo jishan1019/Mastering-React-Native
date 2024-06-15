@@ -5,8 +5,8 @@ import {
   useNavigation,
 } from './components/NavigationProvider';
 import Home from './screen/Home';
-import Details from './screen/Details';
 import Calculator from './screen/Calculator';
+import Stopwatch from './screen/Stopwatch';
 
 const AppContent: React.FC = () => {
   const {currentScreen} = useNavigation();
@@ -14,8 +14,8 @@ const AppContent: React.FC = () => {
   switch (currentScreen) {
     case 'Home':
       return <Home />;
-    case 'Details':
-      return <Details />;
+    case 'Stopwatch':
+      return <Stopwatch />;
     case 'Calculator':
       return <Calculator />;
     default:
