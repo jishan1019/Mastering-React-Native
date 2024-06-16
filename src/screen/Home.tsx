@@ -55,6 +55,25 @@ const Home = () => {
             <Text style={styles.cardText}>Color Generator</Text>
           </TouchableOpacity>
         </View>
+        <View style={styles.cardRow}>
+          <TouchableOpacity
+            style={styles.card}
+            onPress={() => navigate('PassGenerate')}>
+            <Text style={styles.cardText}>Password Generator</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.card}
+            onPress={() => navigate('Music')}>
+            <Text style={styles.cardText}>Music Player</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.cardRow}>
+          <TouchableOpacity
+            style={styles.card}
+            onPress={() => navigate('TicTacToe')}>
+            <Text style={styles.cardText}>TikTacToe</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );

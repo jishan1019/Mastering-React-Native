@@ -20,7 +20,7 @@ const Stopwatch = () => {
     let timer;
     if (running) {
       timer = setInterval(() => {
-        setMilliseconds(prev => prev + 10); // Update every 10 milliseconds
+        setMilliseconds(prev => prev + 10);
       }, 10);
     } else {
       clearInterval(timer);
@@ -36,7 +36,7 @@ const Stopwatch = () => {
   const formatTime = time => {
     const minutes = Math.floor(time / 60000);
     const seconds = Math.floor((time % 60000) / 1000);
-    const centiseconds = Math.floor((time % 1000) / 10); // Display centiseconds
+    const centiseconds = Math.floor((time % 1000) / 10);
     return `${minutes < 10 ? '0' + minutes : minutes}:${
       seconds < 10 ? '0' + seconds : seconds
     }:${centiseconds < 10 ? '0' + centiseconds : centiseconds}`;
